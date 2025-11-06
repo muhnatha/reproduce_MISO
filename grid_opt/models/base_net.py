@@ -21,7 +21,7 @@ class BaseNet(nn.Module):
     ):
         super().__init__()
         self.cfg = cfg
-        self.d = self.cfg['spatial_dim']
+        self.d = self.cfg['spatial_dim'] # spatial dimension
         self.device = device
         self.dtype = dtype
         assert self.d == 2 or self.d == 3
