@@ -30,7 +30,7 @@ class GridNet(BaseNet):
     def init_grid(self,cfg):
         """ Initializes the multi-resolution grid structure """
         self.num_levels = cfg['grid']['n_levels']
-        self.second_order_grid_sample = 'second_order_grid_sample' in cfg['grid'] and cfg['grid'] and cfg['grid']['secod_order_grid_sample']
+        self.second_order_grid_sample = 'second_order_grid_sample' in cfg['grid'] and cfg['grid']['second_order_grid_sample']
         base_cell_size = cfg['grid']['base_cell_size']
         scale_factor = cfg['grid']['per_level_scale']
         self.fdim = cfg['grid']['feature_dim']
