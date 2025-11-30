@@ -60,7 +60,7 @@ class GridNet(BaseNet):
                     dtype=self.dtype,
                     initial_feature=init_feature,
                     init_stddev=cfg['grid']['init_stddev'],
-                    secod_order_grid_sample=self.second_order_grid_sample
+                    second_order_grid_sample=self.second_order_grid_sample
                 )
                 # This is an auxiliary grid that learns a "confidence" or "stability"
                 # score (1.0 = mapped, 0.0 = empty). 
@@ -200,13 +200,13 @@ class GridNet(BaseNet):
             self.unlock_level(level)
     
     def lock_pose(self):
-        self.rotation_corrections.require_grad_(False)
-        self.translation_corrections.require_grad_(False)
+        self.rotation_corrections.requires_grad_(False)
+        self.translation_corrections.requires_grad_(False)
         self.lock_all_pose_indices()
     
     def unlock_pose(self):
-        self.rotation_corrections.require_grad_(True)
-        self.translation_corrections.require_grad_(True)
+        self.rotation_corrections.requires_grad_(True)
+        self.translation_corrections.requires_grad_(True)
         self.unlock_all_pose_indices()
     
     def lock_pose_index(self, pose_index:int):
