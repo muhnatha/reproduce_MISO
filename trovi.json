@@ -1,0 +1,7 @@
+{
+  "title": "MISO SLAM Reproduction: Multi-Implicit-Submaps on Newer College Dataset",
+  "short_description": "Automated reproduction of the MISO SLAM pipeline on Chameleon Bare Metal GPU nodes.",
+  "long_description": "This artifact reproduces the MISO SLAM system for large-scale 3D reconstruction. It automates the provisioning of a GPU-enabled Bare Metal node, handles complex environment setup (PyTorch 1.13, PyTorch3D, pysdf), and runs the SLAM pipeline on the Newer College Quad dataset.",
+  "tags": ["SLAM", "GPU", "Robotics", "3D-Reconstruction", "reproduce"],
+  "entrypoint": "main.ipynb"
+}
